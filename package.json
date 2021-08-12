@@ -1,0 +1,107 @@
+{
+  "name": "@asyncapi/modelina",
+  "version": "0.25.0",
+  "description": "The Model SDK for generating data models",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/asyncapi/modelina",
+  "bugs": {
+    "url": "https://github.com/asyncapi/modelina/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/asyncapi/modelina.git"
+  },
+  "keywords": [
+    "asyncapi",
+    "documentation",
+    "generator",
+    "model",
+    "sdk"
+  ],
+  "author": {
+    "name": "The AsyncAPI maintainers"
+  },
+  "main": "lib/cjs/index.js",
+  "module": "lib/esm/index.js",
+  "types": "lib/types/index.d.ts",
+  "files": [
+    "/lib",
+    "./README.md",
+    "./LICENSE"
+  ],
+  "dependencies": {
+    "@apidevtools/json-schema-ref-parser": "^9.0.7",
+    "@asyncapi/parser": "^1.7.0",
+    "change-case": "^4.1.2"
+  },
+  "devDependencies": {
+    "@semantic-release/commit-analyzer": "^8.0.1",
+    "@semantic-release/github": "^7.2.0",
+    "@semantic-release/npm": "^7.1.1",
+    "@semantic-release/release-notes-generator": "^9.0.1",
+    "@types/jest": "^26.0.15",
+    "@typescript-eslint/eslint-plugin": "^4.15.0",
+    "@typescript-eslint/parser": "^4.15.0",
+    "ajv": "^6.12.6",
+    "conventional-changelog-conventionalcommits": "^4.5.0",
+    "cross-env": "^7.0.2",
+    "eslint": "^7.19.0",
+    "eslint-plugin-github": "^4.1.3",
+    "eslint-plugin-security": "^1.4.0",
+    "eslint-plugin-sonarjs": "^0.5.0",
+    "jest": "^26.6.3",
+    "jsdoc-to-markdown": "^6.0.1",
+    "markdown-toc": "^1.2.0",
+    "semantic-release": "^17.4.2",
+    "ts-jest": "^26.4.4",
+    "typescript": "^4.1.2"
+  },
+  "scripts": {
+    "start": "tsc --watch",
+    "build": "tsc",
+    "build:prod": "npm run build:cjs && npm run build:esm && npm run build:types",
+    "build:cjs": "tsc",
+    "build:esm": "tsc --project tsconfig.json --module ESNext --outDir ./lib/esm",
+    "build:types": "tsc --project tsconfig.json --declaration --emitDeclarationOnly --declarationMap --outDir ./lib/types",
+    "docker:build": "docker build -t asyncapi/modelina .",
+    "docker:test": "npm run docker:build && docker run asyncapi/modelina npm run test",
+    "docker:test:blackbox": "npm run docker:build && docker run asyncapi/modelina npm run test:blackbox",
+    "test": "cross-env CI=true jest --coverage --testPathIgnorePatterns ./test/blackbox",
+    "test:snapshot": "npm run test -- --updateSnapshot",
+    "test:blackbox": "cross-env CI=true jest ./test/blackbox",
+    "test:watch": "jest --watch",
+    "docs": "npm run docs:markdown",
+    "docs:markdown": "jsdoc2md lib/cjs/index.js -f lib/cjs/**/*.js > API.md",
+    "lint": "eslint --max-warnings 0 --config .eslintrc .",
+    "lint:fix": "eslint --max-warnings 0 --config .eslintrc . --fix",
+    "release": "semantic-release",
+    "generate:readme:toc": "markdown-toc -i README.md",
+    "generate:assets": "npm run build:prod && npm run docs && npm run generate:readme:toc",
+    "bump:version": "npm --no-git-tag-version --allow-same-version version $VERSION",
+    "prepublishOnly": "npm run build:prod && npm run generate:readme:toc"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "release": {
+    "branches": [
+      "master"
+    ],
+    "plugins": [
+      [
+        "@semantic-release/commit-analyzer",
+        {
+          "preset": "conventionalcommits"
+        }
+      ],
+      [
+        "@semantic-release/release-notes-generator",
+        {
+          "preset": "conventionalcommits"
+        }
+      ],
+      "@semantic-release/npm",
+      "@semantic-release/github"
+    ]
+  }
+}

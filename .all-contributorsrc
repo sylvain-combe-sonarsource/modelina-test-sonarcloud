@@ -1,0 +1,109 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "magicmatatjahu",
+      "name": "Maciej Urbańczyk",
+      "avatar_url": "https://avatars.githubusercontent.com/u/20404945?v=4",
+      "profile": "https://github.com/magicmatatjahu",
+      "contributions": [
+        "bug",
+        "code",
+        "doc",
+        "ideas",
+        "maintenance",
+        "question",
+        "test",
+        "review"
+      ]
+    },
+    {
+      "login": "czlowiek488",
+      "name": "czlowiek488",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34620109?v=4",
+      "profile": "https://github.com/czlowiek488",
+      "contributions": [
+        "bug",
+        "review",
+        "ideas"
+      ]
+    },
+    {
+      "login": "smoya",
+      "name": "Sergio Moya",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1083296?v=4",
+      "profile": "https://github.com/smoya",
+      "contributions": [
+        "bug",
+        "code",
+        "test",
+        "doc",
+        "review"
+      ]
+    },
+    {
+      "login": "jonaslagoni",
+      "name": "Jonas Lagoni",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13396189?v=4",
+      "profile": "https://github.com/jonaslagoni",
+      "contributions": [
+        "bug",
+        "code",
+        "doc",
+        "ideas",
+        "maintenance",
+        "question",
+        "test",
+        "review"
+      ]
+    },
+    {
+      "login": "derberg",
+      "name": "Lukasz Gornicki",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6995927?v=4",
+      "profile": "https://dev.to/derberg",
+      "contributions": [
+        "review",
+        "bug",
+        "code"
+      ]
+    },
+    {
+      "login": "arjungarg07",
+      "name": "Arjun Garg",
+      "avatar_url": "https://avatars.githubusercontent.com/u/53009722?v=4",
+      "profile": "https://github.com/arjungarg07",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "fmvilas",
+      "name": "Fran Méndez",
+      "avatar_url": "https://avatars.githubusercontent.com/u/242119?v=4",
+      "profile": "http://www.fmvilas.com",
+      "contributions": [
+        "review"
+      ]
+    },
+    {
+      "login": "Blakelist7",
+      "name": "Kanwal Singh",
+      "avatar_url": "https://avatars.githubusercontent.com/u/54525960?v=4",
+      "profile": "https://github.com/Blakelist7",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "modelina",
+  "projectOwner": "asyncapi",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}

@@ -1,0 +1,18 @@
+{
+  "definitions": {
+    "test": {
+      "type": "object",
+      "properties": {
+        "floor": {
+          "$ref": "#/definitions/test"
+        }
+      }
+    }
+  },
+  "type": "object",
+  "properties": {
+    "street_address": {
+      "$ref": "#/definitions/test"
+    }
+  }
+}

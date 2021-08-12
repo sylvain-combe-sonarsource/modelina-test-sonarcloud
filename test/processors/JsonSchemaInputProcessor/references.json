@@ -1,0 +1,13 @@
+{
+  "definitions": {
+    "test": {
+      "type": "string"
+    }
+  },
+  "type": "object",
+  "properties": {
+    "street_address": {
+      "$ref": "#/definitions/test"
+    }
+  }
+}
