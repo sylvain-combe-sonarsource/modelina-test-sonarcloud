@@ -1,7 +1,0 @@
-organization=sylvain-combe-sonarsource
-projectKey=sylvain-combe-sonarsource_modelina-test-sonarcloud
-serverUrl=https://sonarcloud.io
-serverVersion=8.0.0.22548
-dashboardUrl=https://sonarcloud.io/dashboard?id=sylvain-combe-sonarsource_modelina-test-sonarcloud
-ceTaskId=AXs6sw7QArN4Y6b25CFf
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AXs6sw7QArN4Y6b25CFf
